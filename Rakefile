@@ -2,13 +2,10 @@
 
 require "json"
 
-url_pow     = "website"
-url_live    = "website.com"
+url_pow     = "circulus"
+url_live    = "circulus.sk"
 
-deploy_user = "user@website.com"
-deploy_path = "website.com/location"
-
-github_repo = "user/repository"
+github_repo = "circulus/circulus.github.io"
 
 desc "Delete old website files to start fresh."
 task :clean do
@@ -58,12 +55,6 @@ task :build => [:clean, :compile, :compress] do
   puts "Done! See it locally at http://#{url_pow}.dev, or live at http://#{url_live}."
 end
 
-desc "Upload a fresh copy of the site to your server."
-task :deploy => [:build] do
-  puts "Deploying at http://#{url_live}!"
-  system "rsync -avze 'ssh -p 22' --delete public/ #{deploy_user}:#{deploy_path}"
-end
-
 desc "Upload a copy of your site to the server, and update GitHub."
 # Usage: rake ship "Commit message."
 task :ship do
@@ -73,7 +64,6 @@ task :ship do
   system "git commit -am '#{message}'"
   system "git pull"
   system "git push"
-  Rake::Task['deploy'].execute
   puts "Pushed latest to GitHub and deployed to http://#{url_live}."
 end
 
