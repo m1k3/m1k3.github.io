@@ -1,11 +1,9 @@
 {% include head.html %}
-  <body{% if page.class %} class="{{ page.class }}"{% endif %}>
-    {% include navigation.html %}
+  <body class="theme-base-0d layout-reverse">
+    {% include sidebar.html %}
 
-    <div class="content">
+    <div class="content container">
       {{ content }}
     </div>
-
-    {% include footer.html %}
   </body>
 </html>

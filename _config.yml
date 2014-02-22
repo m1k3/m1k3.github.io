@@ -1,17 +1,17 @@
-title: Website Name
-author: Your Name
-subtitle: "A nice static website, ready for design."
-description: "A nice static website, ready for design."
+title: Circulus
+author: Michal Oláh
+subtitle: ""
+description: ""
 
-github: username
-twitter: username
-dribbble: username
-instagram: username
+github: m1k3
+twitter: michalolah
+linkedin: http://www.linkedin.com/pub/oláh-michal/76/a22/7aa
 
 source: ./_source
 destination: public
 exclude: [public, Gemfile, Gemfile.lock, Rakefile, README.md]
 
-permalink: /:categories/:title
-markdown: rdiscount
+permalink: /blog/:categories/:title
+#markdown: rdiscount
+markdown: redcarpet
 pygments: true
