@@ -1,0 +1,17 @@
+// Footer ———————————————————————————————————— •
+// ——————————————————————————————————————————— •
+
+.footer {
+  @include border-box;
+  margin: 1em auto;
+  width: 100%;
+}
+
+// Footer: Desktop ——————————————————————————— •
+// ——————————————————————————————————————————— •
+
+@include responsive-break-point(768px) {
+  .footer {
+    max-width: 960px;
+  }
+}

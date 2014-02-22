@@ -1,0 +1,17 @@
+title: Website Name
+author: Your Name
+subtitle: "A nice static website, ready for design."
+description: "A nice static website, ready for design."
+
+github: username
+twitter: username
+dribbble: username
+instagram: username
+
+source: ./_source
+destination: public
+exclude: [public, Gemfile, Gemfile.lock, Rakefile, README.md]
+
+permalink: /:categories/:title
+markdown: rdiscount
+pygments: true

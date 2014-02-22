@@ -1,0 +1,23 @@
+// Navigation ———————————————————————————————— •
+// ——————————————————————————————————————————— •
+
+.navigation {
+  @include border-box;
+  margin: 1em auto;
+  width: 100%;
+}
+
+.navigation-home {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+
+// Navigation: Desktop ——————————————————————— •
+// ——————————————————————————————————————————— •
+
+@include responsive-break-point(768px) {
+  .navigation {
+    max-width: 960px;
+  }
+}
