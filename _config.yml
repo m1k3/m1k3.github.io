@@ -10,7 +10,6 @@ linkedin: http://www.linkedin.com/pub/oláh-michal/76/a22/7aa
 slideshare: http://www.slideshare.net/olahmichal
 
 source: ./_source
-destination: public
 exclude: [public, Gemfile, Gemfile.lock, Rakefile, README.md]
 
 permalink: /blog/:categories/:title

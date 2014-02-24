@@ -10,7 +10,7 @@ github_repo = "circulus/circulus.github.io"
 desc "Delete old website files to start fresh."
 task :clean do
   puts "Starting fresh!"
-  system "rm -rf public"
+  system "rm -rf _site"
 end
 
 desc "Design, write, and edit live."
