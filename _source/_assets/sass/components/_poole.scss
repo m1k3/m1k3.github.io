@@ -145,10 +145,10 @@ abbr[title] {
 }
 
 /* Code */
-code,
-pre {
-  font-family: Menlo, Monaco, "Courier New", monospace;
-}
+/*code,*/
+/*pre {*/
+  /*font-family: Menlo, Monaco, "Courier New", monospace;*/
+/*}*/
 /*code {*/
   /*padding: .25em .5em;*/
   /*font-size: 85%;*/
@@ -182,6 +182,19 @@ pre {
 /*.highlight pre {*/
   /*margin-bottom: 0;*/
 /*}*/
+
+.highlight pre {
+  font-size: .8rem;
+  line-height: 1.4;
+  margin: 0 0 0 5%;
+  padding: 1.23em 0 2em 0;
+  overflow: auto;
+  white-space: pre;
+}
+.highlight pre code {
+  margin: 0;
+  padding: 0;
+}
 
 /* Quotes */
 blockquote {

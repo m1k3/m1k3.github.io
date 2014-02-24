@@ -2,8 +2,8 @@
 
 require "json"
 
-url_pow     = "circulus"
-url_live    = "circulus.sk"
+url_pow     = "michalolah"
+url_live    = "michalolah.com"
 
 github_repo = "circulus/circulus.github.io"
 

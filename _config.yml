@@ -1,11 +1,13 @@
-title: Circulus
+title: Michal Oláh
 author: Michal Oláh
 subtitle: ""
-description: ""
+description: "If something is not fun, it's not worth doing."
+tagline: "Website development"
 
 github: m1k3
 twitter: michalolah
 linkedin: http://www.linkedin.com/pub/oláh-michal/76/a22/7aa
+slideshare: http://www.slideshare.net/olahmichal
 
 source: ./_source
 destination: public
