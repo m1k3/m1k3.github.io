@@ -7,7 +7,8 @@ tagline: "having fun developing web applications"
 github: m1k3
 twitter: michalolah
 linkedin: http://www.linkedin.com/pub/oláh-michal/76/a22/7aa
-slideshare: http://www.slideshare.net/olahmichal
+slideshare: olahmichal
+sitepoint: molah
 
 destination: ./public
 exclude: [public, Gemfile, Gemfile.lock, Rakefile, README.md]
