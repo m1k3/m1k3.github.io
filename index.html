@@ -12,10 +12,28 @@ layout: default
 <p>
   <a href="mailto:iam@michalolah.com?Subject=michalolah.com contact" target="_top">iam@michalolah.com</a>
 </p>
-
+<hr/>
 <p>
-  For some interesting reading have a look at the <a href="/blog">blog</a>
+  For some interesting reading have a look at the <a href="/blog">blog</a>.
 </p>
+
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h3 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+
+    {{ post.excerpt }}
+  </div>
+  {% endfor %}
+</div>
+
+<hr/>
 
 <p>
 You should follow me on:
@@ -32,4 +50,5 @@ You should follow me on:
 <p>
   Subscribe <a href="{{ site.url }}/feed.xml">via RSS</a>
 </p>
+
 

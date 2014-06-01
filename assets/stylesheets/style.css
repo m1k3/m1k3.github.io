@@ -1058,6 +1058,15 @@ a.pagination-item:hover {
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536; }
 
+#twitter-timeline-wrapper {
+  position: absolute;
+  left: 18px;
+  top: 140px;
+  width: 250px; }
+
+.wrap {
+  min-height: 900px; }
+
 .wrap.robot {
   background: #c32f34; }
   .wrap.robot .masthead {

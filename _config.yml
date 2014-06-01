@@ -18,3 +18,4 @@ permalink: /blog/:categories/:title
 #markdown: rdiscount
 markdown: redcarpet
 pygments: true
+paginate: 2
