@@ -1,8 +1,4 @@
 #twitter-timeline-wrapper {
-  position: absolute;
-  left: 18px;
-  top: 140px;
-  width: 250px; }
-
-.wrap {
-  min-height: 900px; }
+  width: 100%; }
+  #twitter-timeline-wrapper iframe {
+    width: 100%; }
