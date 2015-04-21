@@ -4,8 +4,6 @@ title:  "Exporting milions of rows via CSV"
 categories: ruby rails sql csv export
 ---
 
-# Exporting milions of rows via CSV
-
 Exporting CSV seems like a solved issue in the Ruby on Rails framework and to a
 large extent it is. There are large amounts of tutorials available on how to
 implement an efficient CSV export solution with support for [http
