@@ -15,5 +15,4 @@ destination: ./public
 exclude: [public, Gemfile, Gemfile.lock, Rakefile, README.md]
 
 permalink: /blog/:categories/:title
-pygments: true
 paginate: 2
