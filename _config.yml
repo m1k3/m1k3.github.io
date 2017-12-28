@@ -15,7 +15,5 @@ destination: ./public
 exclude: [public, Gemfile, Gemfile.lock, Rakefile, README.md]
 
 permalink: /blog/:categories/:title
-#markdown: rdiscount
-markdown: redcarpet
 pygments: true
 paginate: 2
