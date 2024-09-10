@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
 gem 'coffee-script'
-gem 'jekyll', '3.9.0'
+gem 'jekyll', '4.3.3'
 gem 'rake'
 gem 'sass'
