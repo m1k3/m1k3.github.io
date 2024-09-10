@@ -54,7 +54,11 @@ GEM
       strscan
     rouge (3.26.1)
     safe_yaml (1.0.5)
-    sass (3.2.14)
+    sass (3.7.4)
+      sass-listen (~> 4.0.0)
+    sass-listen (4.0.0)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
     strscan (3.1.0)
 
 PLATFORMS
