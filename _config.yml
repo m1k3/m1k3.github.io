@@ -16,3 +16,5 @@ exclude: [public, Gemfile, Gemfile.lock, Rakefile, README.md]
 
 permalink: /blog/:categories/:title
 paginate: 2
+plugins:
+  - jekyll-paginate
