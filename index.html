@@ -1,54 +1,34 @@
 ---
 title: Home
-layout: default
 ---
 
 <h1>Welcome traveler</h1>
 
 <p>
-  This is the personal website of <a href="http://twitter.com/{{ site.twitter }}">{{ site.author }}</a>.
-  I enjoy crafting interesting web application using Ruby on Rails. If you have a great idea you would like to get off the ground contact me at:
-</p>
-<p>
+  This is the personal website of <a href="//twitter.com/{{ site.twitter }}">{{ site.author }}</a>.
+  I enjoy crafting interesting applications using Ruby on Rails, Scala or Golang.
+  If you have a great idea you would like to get off the ground contact me at:
   <a href="mailto:iam@michalolah.com?Subject=michalolah.com contact" target="_top">iam@michalolah.com</a>
 </p>
+
 <hr/>
-<p>
-  For some interesting reading have a look at the <a href="/blog">blog</a>.
-</p>
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h3 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{ post.excerpt }}
-  </div>
+<p>For some interesting reading have a look at the <a href="{% link blog.html %}">blog</a>.</p>
+<ul class="posts">
+  {% for post in site.posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
-</div>
-
-<hr/>
-
-<p>
-You should follow me on:
-</p>
-
-<ul>
-  <li><a href="http://github.com/{{ site.github_handle }}" target="_blank">GitHub</a></li>
-  <li><a href="http://twitter.com/{{ site.twitter }}" target="blank">Twitter</a></li>
-  <li><a href="http://sk.linkedin.com/in/{{ site.linkedin }}" target="blank">Linkedin</a></li>
-  <li><a href="http://www.slideshare.net/{{ site.slideshare }}" target="blank">Slideshare</a></li>
-  <li><a href="http://www.sitepoint.com/author/{{ site.sitepoint }}" target="blank">Sitepoint</a></li>
 </ul>
 
-<p>
-  Subscribe <a href="{{ site.url }}/feed.xml">via RSS</a>
-</p>
+<hr/>
 
+<p>You should follow me on:</p>
+<ul>
+  <li><a href="//github.com/{{ site.github_handle }}" target="_blank">GitHub</a></li>
+  <li><a href="//twitter.com/{{ site.twitter }}" target="blank">Twitter</a></li>
+  <li><a href="//sk.linkedin.com/in/{{ site.linkedin }}" target="blank">Linkedin</a></li>
+  <li><a href="//www.slideshare.net/{{ site.slideshare }}" target="blank">Slideshare</a></li>
+  <li><a href="//www.sitepoint.com/author/{{ site.sitepoint }}" target="blank">Sitepoint</a></li>
+</ul>
 
+<p>Subscribe <a href="/feed.xml">via RSS</a></p>

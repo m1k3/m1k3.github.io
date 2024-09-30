@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Stubbing external services"
 categories: testing ruby rails
 ---
@@ -30,7 +29,7 @@ dealt with just by using the record-playback technique.
 
 The most common case I have come across where the record-playback
 technique does not work is when you need to get an external system into
-a state which is not easily achievable. E.g. you want to retry 
+a state which is not easily achievable. E.g. you want to retry
 a subscription payment when the payment is past due.
 More on Braintree payments can be found
 [here][braintree-doc-subscriptions].
@@ -55,7 +54,7 @@ This is both cumbersome and error-prone.
 
 ## fake_braintree
 
-During development I read a blog post on the [Toughtbot blog][howto-stub-external-services-in-tests] 
+During development I read a blog post on the [Toughtbot blog][howto-stub-external-services-in-tests]
 which got me thingking and eventually rolling my own little braintree
 sandbox stub. This got me thinking again - someone else must have encountered
 this problem and solve it somehow (perhaps much better than me). This
@@ -78,7 +77,7 @@ interacting with. The easiest way I found was to create is manually
 within fake_braintree:
 
 ``` ruby
-customer = FakeBraintree::Customer.new({'credit_card' => 
+customer = FakeBraintree::Customer.new({'credit_card' =>
                                          {
                                            'number' => '4111111111111111',
                                            'expiration_month' => '12',
@@ -164,11 +163,11 @@ customer.default_credit_card.subscriptions
 #[<Braintree::CreditCard token: "5910f4ea0062a0e29afd3dccc741e3ce", billing_address: nil, bin: "411111", card_type: nil, cardholder_name: nil, created_at: nil, customer_id: "42", expiration_month: "12", expiration_year: "2015", last_4: "1111", updated_at: nil, prepaid: nil, payroll: nil, commercial: nil, debit: nil, durbin_regulated: nil, healthcare: nil, country_of_issuance: nil, issuing_bank: nil, image_url: nil>]
 ```
 
-[braintree]: http://braintreepayments.com
+[braintree]: https://braintreepayments.com
 [braintree-doc-subscriptions]: https://www.braintreepayments.com/docs/ruby/subscriptions/overview
 [braintree-doc-creditcard-subscriptions]: https://www.braintreepayments.com/docs/ruby/credit_cards/details#associations
-[ruby-tapas-end-of-mocking]: http://www.rubytapas.com/episodes/52-The-End-of-Mocking
+[ruby-tapas-end-of-mocking]: https://graceful.dev/courses/the-freebies/modules/testing/topic/episode-052-the-end-of-mocking
 [vcr-github]: https://github.com/vcr/vcr
 [fake-braintree-github]: https://github.com/thoughtbot/fake_braintree
-[howto-stub-external-services-in-tests]: http://robots.thoughtbot.com/how-to-stub-external-services-in-tests/
+[howto-stub-external-services-in-tests]: https://robots.thoughtbot.com/how-to-stub-external-services-in-tests/
 [m1k3-fake_braintree-repo]: https://github.com/m1k3/fake_braintree

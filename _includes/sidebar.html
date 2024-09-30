@@ -16,7 +16,7 @@
       `layout: page` in the front-matter. See readme for usage.
     {% endcomment %}
 
-    {% assign pages_list = site.pages %}
+    {% assign pages_list = site.html_pages %}
     {% for node in pages_list %}
       {% if node.title != null %}
         {% if node.layout == "page" %}
@@ -26,16 +26,13 @@
     {% endfor %}
 
     <li class="sidebar-nav-item">&nbsp;</li>
-    <li class="sidebar-nav-item">Subscribe <a href="{{ site.url }}/feed.xml" target="_blank">via RSS</a></li>
+    <li class="sidebar-nav-item">Subscribe <a href="/feed.xml" target="_blank">via RSS</a></li>
     <li class="sidebar-nav-item">&nbsp;</li>
-    <li class="sidebar-nav-item"><a href="http://github.com/{{ site.github_handle }}" target="_blank">@{{ site.github_handle }} on GitHub</a></li>
-    <li class="sidebar-nav-item"><a href="http://twitter.com/{{ site.twitter }}" target="blank">@{{ site.twitter }} on Twitter</a></li>
-    <li class="sidebar-nav-item"><a href="http://sk.linkedin.com/in/{{ site.linkedin }}"
-      target="blank">@{{ site.linkedin }} on Linkedin</a></li>
-    <li class="sidebar-nav-item"><a href="http://www.slideshare.net/{{ site.slideshare }}" target="blank">@{{ site.slideshare }} on Slideshare</a></li>
-    <li class="sidebar-nav-item"><a
-    href="http://www.sitepoint.com/author/{{ site.sitepoint }}"
-  target="blank">@{{ site.sitepoint }} on Sitepoint</a></li>
+    <li class="sidebar-nav-item"><a href="//github.com/{{ site.github_handle }}" target="_blank">@{{ site.github_handle }} on GitHub</a></li>
+    <li class="sidebar-nav-item"><a href="//twitter.com/{{ site.twitter }}" target="blank">@{{ site.twitter }} on Twitter</a></li>
+    <li class="sidebar-nav-item"><a href="//sk.linkedin.com/in/{{ site.linkedin }}" target="blank">@{{ site.linkedin }} on Linkedin</a></li>
+    <li class="sidebar-nav-item"><a href="//www.slideshare.net/{{ site.slideshare }}" target="blank">@{{ site.slideshare }} on Slideshare</a></li>
+    <li class="sidebar-nav-item"><a href="//www.sitepoint.com/author/{{ site.sitepoint }}" target="blank">@{{ site.sitepoint }} on Sitepoint</a></li>
   </nav>
 
   <div class="sidebar-item">

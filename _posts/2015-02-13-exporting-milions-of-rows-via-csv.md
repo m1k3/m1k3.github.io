@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Exporting milions of rows via CSV"
 categories: ruby rails sql csv export
 ---
@@ -7,7 +6,7 @@ categories: ruby rails sql csv export
 Exporting CSV seems like a solved issue in the Ruby on Rails framework and to a
 large extent it is. There are large amounts of tutorials available on how to
 implement an efficient CSV export solution with support for [http
-streaming](http://smsohan.com/blog/2013/05/09/genereating-and-streaming-potentially-large-csv-files-using-ruby-on-rails/).
+streaming](https://smsohan.com/blog/2013/05/09/genereating-and-streaming-potentially-large-csv-files-using-ruby-on-rails/).
 There are two issues with implementing a CSV export in Rails.
 
 1. It takes a considerable amount of time
@@ -25,7 +24,7 @@ If you want to use the code discussed here, the base modules are available [here
 Lets start by implementing response streaming the same way we would if we used
 Rails to construct the CSV response.
 
-``` ruby
+```ruby
 class CsvExportController < ApplicationController
   def index
     respond_to do |format|
@@ -69,7 +68,7 @@ end
 ```
 
 There is a lot going on here, but we won't go into details, because [other
-posts](http://smsohan.com/blog/2013/05/09/genereating-and-streaming-potentially-large-csv-files-using-ruby-on-rails/)
+posts](https://smsohan.com/blog/2013/05/09/genereating-and-streaming-potentially-large-csv-files-using-ruby-on-rails/)
 cover the topic. The most important thing to grasp is that the controller sets
 the response body to the return value of the csv_lines method which is an
 object that implements the Enumerable interface. The controller will iterate
@@ -179,13 +178,11 @@ will end up getting called by the controller. It consists of three steps:
 2. It yields a properly encoded header row. The client provides the header.
 3. It calls to the generate_csv method yielding whatever that method yields.
 
-The generate_csv method is the interesting part. It uses a low (level
-API)[http://deveiate.org/code/pg/PG/Connection.html] of the postgres
-connnector. The connector receives a (copy
-command)[http://www.postgresql.org/docs/9.2/static/sql-copy.html] with a sql
-query constructed to select all rows with a custom delimiter. Since the row
-returned from Postgres is a csv string all Ruby has to do is properly encode
-the string and pass it along.
+The generate_csv method is the interesting part. It uses a low (level API)[//deveiate.org/code/pg/PG/Connection.html]
+of the postgres connnector. The connector receives a (copy command)[//www.postgresql.org/docs/9.2/static/sql-copy.html]
+with a sql query constructed to select all rows with a custom delimiter. Since
+the row returned from Postgres is a csv string all Ruby has to do is properly
+encode the string and pass it along.
 
 That is all there is to it. The download will now be super-fast and consume a
 constant amount of memory while generating the output.
