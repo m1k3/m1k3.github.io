@@ -1,9 +1,9 @@
-url: "http://michalolah.com"
-title: "Michal Oláh"
-author: "Michal Oláh"
-subtitle: ""
-description: "If something is not fun, it's not worth doing."
-tagline: "having fun developing web applications"
+domain: michalolah.com
+url: https://michalolah.com
+title: Michal Oláh
+author: Michal Oláh
+description: Crafting application for over 20 years.
+tagline: crafting applications
 
 github_handle: m1k3
 twitter: michalolah
@@ -11,8 +11,22 @@ linkedin: michalolah
 slideshare: olahmichal
 sitepoint: molah
 
-destination: ./public
 exclude: [public, Gemfile, Gemfile.lock, Rakefile, README.md]
 
 permalink: /blog/:categories/:title
-paginate: 2
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
