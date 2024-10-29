@@ -1,6 +1,4 @@
 ---
-title:  "Welcome to Jekyll!"
-date:   2013-10-04 09:24:37
 categories: jekyll sitebuilding
 ---
 
