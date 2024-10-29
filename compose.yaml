@@ -1,0 +1,17 @@
+x-base: &base
+  image: ruby:3.3
+  working_dir: /code/app
+  volumes:
+    - .:/code/app
+    - gems_3_3:/usr/local/bundle
+
+services:
+  app:
+    <<: *base
+    command: bash -c 'bundle install && bundle exec jekyll s -H 0.0.0.0 -D'
+    ports:
+      - 127.0.0.1:4000:4000
+
+volumes:
+  gems_3_3:
+
